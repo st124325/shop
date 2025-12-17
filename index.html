@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ModernShop - Современный интернет-магазин с лучшими товарами">
+    <title>ModernShop - Интернет-магазин | GitHub Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect x="4" y="8" width="24" height="18" rx="2" fill="url(#shopGradient)" stroke="url(#shopGradient)" stroke-width="2"/>
+                    <path d="M12 8V6C12 4.89543 12.8954 4 14 4H18C19.1046 4 20 4.89543 20 6V8" stroke="url(#shopGradient)" stroke-width="2"/>
+                    <circle cx="14" cy="19" r="2" fill="white"/>
+                    <circle cx="18" cy="19" r="2" fill="white"/>
+                    <defs>
+                        <linearGradient id="shopGradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#6366F1"/>
+                            <stop offset="100%" stop-color="#8B5CF6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>ModernShop</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#products">Товары</a></li>
+                <li><a href="#categories">Категории</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Поиск">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M15 15L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <button class="icon-btn cart-btn" aria-label="Корзина">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 4H6L8 14H16L18 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="9" cy="17" r="1" fill="currentColor"/>
+                        <circle cx="15" cy="17" r="1" fill="currentColor"/>
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>🔥 Новые поступления</span>
+                </div>
+                <h1 class="hero-title">
+                    Стиль и качество
+                    <span class="gradient-text">в каждом товаре</span>
+                </h1>
+                <p class="hero-description">
+                    Откройте для себя коллекцию премиальных товаров с бесплатной доставкой 
+                    и гарантией качества. Тысячи довольных клиентов по всему миру.
+                </p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary btn-large">
+                        <span>Смотреть каталог</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn-secondary btn-large">
+                        <span>Узнать больше</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Товаров</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Клиентов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Рейтинг</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Категории -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Категории</div>
+                <h2 class="section-title">Популярные категории</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3 class="category-title">Одежда</h3>
+                    <p class="category-count">500+ товаров</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">👟</div>
+                    <h3 class="category-title">Обувь</h3>
+                    <p class="category-count">300+ товаров</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⌚</div>
+                    <h3 class="category-title">Аксессуары</h3>
+                    <p class="category-count">200+ товаров</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💻</div>
+                    <h3 class="category-title">Электроника</h3>
+                    <p class="category-count">800+ товаров</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Товары -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Товары</div>
+                <h2 class="section-title">Популярные товары</h2>
+                <p class="section-description">Выберите из нашей коллекции лучших товаров</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Новинка</div>
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <button class="product-btn">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Электроника</div>
+                        <h3 class="product-title">Умные часы Pro</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₽12,990</span>
+                            <span class="price-old">₽15,990</span>
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge sale">Скидка -20%</div>
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <button class="product-btn">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Одежда</div>
+                        <h3 class="product-title">Куртка Premium</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₽4,990</span>
+                            <span class="price-old">₽6,290</span>
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <button class="product-btn">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Обувь</div>
+                        <h3 class="product-title">Кроссовки Sport</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(256)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₽8,990</span>
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Хит продаж</div>
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <button class="product-btn">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Аксессуары</div>
+                        <h3 class="product-title">Рюкзак Urban</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(342)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₽3,490</span>
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <button class="product-btn">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Электроника</div>
+                        <h3 class="product-title">Наушники Wireless</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(512)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₽5,990</span>
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">В корзину</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge sale">Скидка -15%</div>
+                    <div class="product-image">
+                        <div class="product-overlay">
+                            <button class="product-btn">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Одежда</div>
+                        <h3 class="product-title">Футболка Classic</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(187)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">₽1,990</span>
+                            <span class="price-old">₽2,350</span>
+                        </div>
+                        <button class="btn btn-primary btn-block add-to-cart">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Бесплатная доставка</h3>
+                    <p class="feature-description">При заказе от ₽3000</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Безопасная оплата</h3>
+                    <p class="feature-description">Защищенные транзакции</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">↩️</div>
+                    <h3 class="feature-title">Легкий возврат</h3>
+                    <p class="feature-description">В течение 30 дней</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Гарантия качества</h3>
+                    <p class="feature-description">Официальная гарантия</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-badge">О нас</div>
+                    <h2 class="section-title">ModernShop - ваш надежный партнер</h2>
+                    <p class="about-description">
+                        Мы работаем на рынке уже более 10 лет, предлагая нашим клиентам 
+                        только качественные товары по доступным ценам. Наша миссия - 
+                        сделать покупки удобными и приятными.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Лет на рынке</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Довольных клиентов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Товаров в каталоге</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Контакты</div>
+                <h2 class="section-title">Свяжитесь с нами</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:info@modernshop.ru" class="contact-value">info@modernshop.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <div class="contact-label">Телефон</div>
+                            <a href="tel:+78001234567" class="contact-value">+7 (800) 123-45-67</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <div class="contact-label">Адрес</div>
+                            <div class="contact-value">Москва, ул. Примерная, д. 1</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="4" y="8" width="24" height="18" rx="2" fill="url(#footerGradient)" stroke="url(#footerGradient)" stroke-width="2"/>
+                            <path d="M12 8V6C12 4.89543 12.8954 4 14 4H18C19.1046 4 20 4.89543 20 6V8" stroke="url(#footerGradient)" stroke-width="2"/>
+                            <circle cx="14" cy="19" r="2" fill="white"/>
+                            <circle cx="18" cy="19" r="2" fill="white"/>
+                            <defs>
+                                <linearGradient id="footerGradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#6366F1"/>
+                                    <stop offset="100%" stop-color="#8B5CF6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>ModernShop</span>
+                    </div>
+                    <p class="footer-description">
+                        Современный интернет-магазин с лучшими товарами
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Каталог</h4>
+                        <ul>
+                            <li><a href="#products">Товары</a></li>
+                            <li><a href="#categories">Категории</a></li>
+                            <li><a href="#">Новинки</a></li>
+                            <li><a href="#">Скидки</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Информация</h4>
+                        <ul>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Возврат</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Контакты</h4>
+                        <ul>
+                            <li><a href="#contact">Связаться</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ModernShop. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
